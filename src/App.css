@@ -1,0 +1,462 @@
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+code {
+    font-family: source-code-pro,Menlo,Monaco,Consolas,"Courier New",monospace
+}
+
+.card__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    flex: 1 1
+}
+
+.card {
+    margin-bottom: 40px;
+    background-color: #fff;
+    min-width: 150px;
+    flex-basis: 22%;
+    margin-left: 20px;
+    display: flex!important;
+    align-items: center;
+    object-fit: contain;
+    flex-direction: column;
+    padding-bottom: 2%
+}
+
+.card__image {
+    width: 80%;
+    object-fit: contain;
+    background-color: #f2f2f2;
+    margin: 20px;
+    padding-right: 5px
+}
+
+.card__content {
+    display: flex;
+    width: 80%;
+    align-items: flex-start;
+    padding-bottom: 2%;
+    flex-direction: column
+}
+
+.card__infoHeading {
+    margin-top: 6%;
+    margin-bottom: 0
+}
+
+.card__title {
+    color: #494c88;
+    margin-top: 0;
+    font-weight: 900
+}
+
+.card__MissionID {
+    margin: -60%;
+    position: static
+}
+
+.card__infoTitle {
+    transform: translateX(-3px)
+}
+
+.card__infoTitle,.mission__list {
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 0
+}
+
+.mission__list {
+    color: #484c94;
+    padding-bottom: 0;
+    margin-left: -1%
+}
+
+.card__launchYear {
+    position: static
+}
+
+.launch_success,.launch_year {
+    color: #484c94;
+    font-weight: 500
+}
+
+.launch_success {
+    display: flex;
+    align-self: center;
+    justify-content: center
+}
+
+.card__successfulLaunch {
+    position: static
+}
+
+@media (min-width: 700px) and (max-width:1024px) {
+    .card {
+        flex-basis:44%
+    }
+}
+
+@media (max-width: 700px) {
+    .card__container {
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        scroll-behavior: smooth;
+        background-color: #f2f2f2
+    }
+
+    .card {
+        flex-basis: 100%;
+        padding: 0;
+        align-items: flex-start;
+        margin: 10px 0
+    }
+
+    .card__image {
+        width: 87%;
+        object-fit: contain;
+        background-color: #f2f2f2;
+        padding-right: 0;
+        margin: 25px auto
+    }
+
+    .card__content {
+        width: 87%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 5%
+    }
+
+    .card__infoHeading,.card__title,.launch_success,.mission__list {
+        font-size: 20px
+    }
+}
+
+.filterPanel {
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    flex-direction: column;
+    border-radius: 2%;
+    padding-bottom: 30px
+}
+
+.filter__header {
+    margin-left: 10px;
+    margin-top: 10px
+}
+
+.filter__title {
+    margin: 0
+}
+
+.filter__launchYear {
+    padding: 0;
+    margin: 0
+}
+
+.MuiButton-root {
+    text-transform: none!important
+}
+
+@media (max-width: 700px) {
+    .filter__title {
+        font-size:24px
+    }
+}
+
+.subPanel {
+    flex: 1 1;
+    flex-direction: column;
+    padding: 0;
+    margin-top: -4%
+}
+
+.subPanel,.subPanel__header {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.subPanel__header {
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    font-size: large
+}
+
+.subPanel__title {
+    font-weight: 500;
+    padding: 0;
+    font-size: large
+}
+
+.subPanel__title:after {
+    content: "";
+    height: 2px;
+    display: block;
+    position: relative;
+    top: 2px!important;
+    left: -10%;
+    right: auto;
+    max-width: 200px;
+    width: 120%;
+    background-color: rgba(0,0,0,.322)
+}
+
+.subPanel__years {
+    display: flex;
+    flex: 1 1;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 300px
+}
+
+.button__container {
+    display: flex;
+    flex-basis: 50%
+}
+
+.button__container,.year__button {
+    align-items: center;
+    justify-content: center
+}
+
+.year__button {
+    background-color: #c5df9d;
+    color: #000;
+    border-radius: 4px;
+    margin-bottom: 10%
+}
+
+.year__button__active {
+    background-color: #7aba02;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center
+}
+
+@media (max-width: 700px) {
+    .subPanel__years {
+        display:flex;
+        flex: 1 1;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 310px
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        background-color:#f2f2f2;
+        scroll-behavior: smooth;
+        width: 99%;
+        overflow-x: hidden
+    }
+
+    .app {
+        display: flex;
+        width: 75%;
+        width: 1440px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .app__header {
+        font-weight: 700;
+        width: 100%;
+        margin-bottom: -10px;
+        margin-top: -10px
+    }
+
+    .app__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1;
+        width: 1440px
+    }
+
+    .app__body {
+        display: flex;
+        justify-content: space-between;
+        scrollbar-width: none;
+        width: 100%
+    }
+
+    .app__filter {
+        flex: 0.2 1;
+        margin-right: 0;
+        width: 100%
+    }
+
+    .app__cards {
+        flex: 0.8 1;
+        background-color: #f2f2f2;
+        margin-left: 30px;
+        width: 100%
+    }
+
+    .app__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+}
+
+@media (max-width: 1440px) and (min-width:1024px) {
+    body {
+        background-color:#f2f2f2;
+        scroll-behavior: smooth;
+        width: 100%;
+        overflow-x: hidden
+    }
+
+    .app__header {
+        font-weight: 700;
+        margin-left: 10px;
+        margin-top: -15px;
+        width: 100%
+    }
+
+    .app__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1;
+        margin-top: -2%
+    }
+
+    .app__body {
+        display: flex;
+        margin: 15px 10px 10px;
+        justify-content: space-between;
+        width: 100%
+    }
+
+    .app__filter {
+        flex: 0.2 1;
+        margin-right: 0;
+        width: 100%
+    }
+
+    .app__cards {
+        flex: 0.8 1;
+        background-color: #fff;
+        margin-left: 10px;
+        width: 100%
+    }
+
+    .app__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0
+    }
+}
+
+@media (max-width: 1024px) and (min-width:700px) {
+    body {
+        background-color:#f2f2f2;
+        scroll-behavior: smooth;
+        width: 100%;
+        overflow-x: hidden
+    }
+
+    .app__header {
+        font-weight: 700;
+        margin-left: 10px;
+        margin-top: -15px;
+        width: 100%
+    }
+
+    .app__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1;
+        margin-top: -2%
+    }
+
+    .app__body {
+        display: flex;
+        margin: 10px;
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: row
+    }
+
+    .app__filter {
+        flex: 0.25 1
+    }
+
+    .app__cards {
+        flex: 0.75 1
+    }
+
+    .app__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        background-color:#f2f2f2;
+        scroll-behavior: smooth;
+        width: 100%;
+        overflow-x: hidden
+    }
+
+    .app__header {
+        font-weight: 700;
+        margin-left: 10px;
+        margin-top: -15px;
+        width: 100%;
+        margin-bottom: -4%;
+        font-size: 24px
+    }
+
+    .app {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 4%;
+        margin-right: 4%
+    }
+
+    .app,.app__body {
+        flex-direction: column
+    }
+
+    .app__cards,.app__filter {
+        max-width: 99%;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .app__cards {
+        margin-top: 10px
+    }
+
+    .app__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0
+    }
+}
